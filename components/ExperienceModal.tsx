@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { ExperienceDetail } from "@/data";
 
 export default function ExperienceModal({ 
@@ -25,15 +25,7 @@ export default function ExperienceModal({
           <div className="flex items-start justify-between">
             <div className="flex-1 min-w-0">
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                <div
-                  className="flex items-center justify-center flex-shrink-0 w-10 h-10 font-mono text-sm font-semibold text-white rounded-full"
-                  style={{
-                    background: "#252535",
-                    border: "1px solid rgba(255,255,255,0.15)",
-                  }}
-                >
-                  {experience.initials}
-                </div>
+                <Image src={experience.logo} alt={experience.company} width={40} height={40} className="object-cover" unoptimized />
                 <div className="flex-1 min-w-0">
                   <h3 className="text-base font-medium text-white break-words sm:text-xl">
                     {experience.role}

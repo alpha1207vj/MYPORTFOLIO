@@ -2,6 +2,8 @@ import BottomNav from "@/components/BottomNav";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS, PERSONAL } from "@/data";
 import Link from "next/link";
+import Image from "next/image";
+
 
 export default function ProjectsPage() {
   return (

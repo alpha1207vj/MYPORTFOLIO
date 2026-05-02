@@ -1,4 +1,5 @@
 import type { Tag } from "@/data";
+import Image from "next/image";
 
 export default function TechPill({ tag }: { tag: Tag }) {
   return (
@@ -11,7 +12,7 @@ export default function TechPill({ tag }: { tag: Tag }) {
     >
       {tag.icon && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={tag.icon} alt={tag.name} className="flex-shrink-0 object-contain w-5 h-5" />
+       <Image src={tag.icon} alt={tag.name} width={20} height={20} className="flex-shrink-0 object-contain" unoptimized />
       )}
       {tag.name}
     </span>

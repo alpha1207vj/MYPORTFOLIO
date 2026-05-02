@@ -6,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
 import ExperienceList from "@/components/ExperienceList";
 import Link from "next/link";
+import Image from "next/image";
 
 import {
   PERSONAL,
@@ -27,11 +28,14 @@ export default function Home() {
             <div className="flex-1 min-w-0">
               <div className="flex flex-wrap gap-3 mb-3">
                 <div className="flex-shrink-0 w-24 h-24 overflow-hidden border-2 rounded-full sm:w-14 sm:h-14 md:w-24 md:h-24 border-white/20">
-                  <img 
-                    src="/me.png" 
-                    alt={PERSONAL.name}
-                    className="object-cover w-full h-full"
-                  />
+                 <Image
+    src="/me.png"
+    alt={PERSONAL.name}
+    width={96}
+    height={96}
+    className="object-cover w-full h-full"
+    priority
+  />
                 </div>
                 <h1 className="font-serif leading-tight text-white" style={{ fontSize: "clamp(2rem, 6vw, 3.6rem)" }}>
                   Hi, I&apos;m {PERSONAL.name} <span className="inline-block animate-wave">👋</span>

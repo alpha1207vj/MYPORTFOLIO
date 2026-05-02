@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import ExperienceModal from "./ExperienceModal";
 import { ExperienceDetail } from "@/data";
@@ -32,7 +32,7 @@ export default function ExperienceList({ experiences }: { experiences: Experienc
   }}
 >
   {job.logo ? (
-    <img src={job.logo} alt={job.company} className="object-cover w-full h-full" />
+   <Image src={job.logo} alt={job.company} width={32} height={32} className="object-cover" unoptimized />
   ) : (
     job.initials
   )}
