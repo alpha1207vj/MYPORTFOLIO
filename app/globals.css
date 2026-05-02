@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Add this — prevents any child from causing horizontal scroll */
+html {
+  overflow-x: hidden;
+ 
+}
+@keyframes tooltipIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ── Scroll behaviour ─────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+/* ── Custom scrollbar — only for elements with .custom-scroll ── */
+.custom-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
+.custom-scroll::-webkit-scrollbar-track { background: #1E1E2E; }
+.custom-scroll::-webkit-scrollbar-thumb { background: #2e2e42; border-radius: 3px; }
+/* ── Custom scrollbar ─────────────────────────────── */
+@media (min-width: 769px) {
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #1E1E2E; }
+  ::-webkit-scrollbar-thumb { background: #2e2e42; border-radius: 3px; }
+}
+
+@media (max-width: 768px) {
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* ── Text selection ───────────────────────────────── */
+::selection { background: rgba(250, 179, 135, 0.25); }
+
+/* ── Scroll-reveal utility ────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Tech-pill icon size ──────────────────────────── */
+.tech-pill-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── Contribution heatmap cells ───────────────────── */
+.cc {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #2e2e42;
+  flex-shrink: 0;
+}
+.cc.l1 { background: #7c3312; }
+.cc.l2 { background: #c2501a; }
+.cc.l3 { background: #f07030; }
+.cc.l4 { background: #FAB387; }
+
+/* ── Bottom nav active state ──────────────────────── */
+.bottom-nav-link { color: #9090a8; transition: color 0.2s; }
+.bottom-nav-link:hover,
+.bottom-nav-link.active { color: #FAB387; }
+
+/* ── Post item hover ──────────────────────────────── */
+/* ── Project card hover ───────────────────────────── */
+.project-card {
+  transition: border-color 0.2s, transform 0.2s;
+}
+.project-card:hover {
+  border-color: rgba(250, 179, 135, 0.22);
+  transform: translateY(-2px);
+}
+
+/* ── Modal backdrop ───────────────────────────────── */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+}
+.modal-backdrop.open {
+  display: flex;
+}
+
+/* ── Hero glow blobs ──────────────────────────────── */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.18;
+}
+
+/* ── Cursor blink in SVG ──────────────────────────── */
+@keyframes svgBlink {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0; }
+}
+.svg-cursor { animation: svgBlink 1.2s ease infinite; }
+
+/* ── LED pulse in Arduino SVG ─────────────────────── */
+@keyframes ledPulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.3; }
+}
+.svg-led { animation: ledPulse 0.8s ease infinite; }
