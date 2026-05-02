@@ -25,7 +25,11 @@ export default function ExperienceModal({
           <div className="flex items-start justify-between">
             <div className="flex-1 min-w-0">
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                <Image src={experience.logo} alt={experience.company} width={40} height={40} className="object-cover" unoptimized />
+               {experience.logo ? (
+    <Image src={experience.logo} alt={experience.company} width={40} height={40} className="object-cover w-full h-full" unoptimized />
+  ) : (
+    experience.initials
+  )}
                 <div className="flex-1 min-w-0">
                   <h3 className="text-base font-medium text-white break-words sm:text-xl">
                     {experience.role}
