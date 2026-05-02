@@ -131,8 +131,8 @@ export const PROJECTS: Project[] = [
     { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
     { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
   ],
-  github: "https://github.com/alpha1207vj",
-  demo: "https://yourportfolio.vercel.app",
+  github: "https://github.com/alpha1207vj/MYPORTFOLIO",
+  demo: "https://joelcodja.vercel.app",
   preview: "arduino",
 },
 ];
