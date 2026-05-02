@@ -5,7 +5,7 @@ export const PERSONAL = {
   name: "Joel CODJA(K-O-J-A)",
   initials: "AC",
   company: "Humanforce",
-  tagline: "21yo <strong class='text-white'>Frontend Developer</strong> living <strong class='text-white'>Benin</strong> 🇧🇯. I build fast, modern web applications and turn ideas into reality.",
+  tagline: "21yo <strong class='text-white'>Frontend Developer</strong> living in <strong class='text-white'>Benin</strong> 🇧🇯. I build fast, modern web applications and turn ideas into reality.",
   email: "gide749@gmail.com",
   github: "https://github.com/alpha1207vj",
   githubUsername: "CJ.DEV",
