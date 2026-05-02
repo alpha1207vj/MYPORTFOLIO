@@ -2,7 +2,7 @@
 
 Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-Live site: https://yourportfolio.vercel.app
+Live site: https://joelcodja.vercel.app
 
 ---
 
