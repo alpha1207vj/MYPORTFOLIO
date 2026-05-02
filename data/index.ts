@@ -132,7 +132,7 @@ export const PROJECTS: Project[] = [
     { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
   ],
   github: "https://github.com/alpha1207vj/MYPORTFOLIO",
-  demo: "https://joelcodja.vercel.app",
+ 
   preview: "arduino",
 },
 ];

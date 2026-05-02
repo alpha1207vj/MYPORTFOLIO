@@ -16,22 +16,39 @@ export default function ExperienceModal({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl max-h-[90vh] rounded-2xl overflow-hidden flex flex-col"
+        className="relative w-full max-w-2xl max-h-[85vh] md:max-h-[90vh] rounded-2xl overflow-hidden flex flex-col"
         style={{ background: "#1a1a1a", border: "1px solid rgba(250,179,135,0.22)" }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header - Fixed */}
-        <div className="flex-shrink-0 p-4 border-b sm:p-6 border-white/10">
-          <div className="flex items-start justify-between">
+        <div className="flex-shrink-0 p-4 border-b sm:p-5 border-white/10">
+          <div className="flex items-start justify-between gap-3">
             <div className="flex-1 min-w-0">
-              <div className="flex flex-wrap items-center gap-3 mb-2">
-               {experience.logo ? (
-    <Image src={experience.logo} alt={experience.company} width={40} height={40} className="object-cover w-full h-full" unoptimized />
-  ) : (
-    experience.initials
-  )}
+              <div className="flex items-center gap-3 mb-2">
+                {/* Fixed image sizing */}
+                {experience.logo ? (
+                  <div className="relative flex-shrink-0 w-10 h-10 overflow-hidden rounded-full bg-white/10">
+                    <Image 
+                      src={experience.logo} 
+                      alt={experience.company} 
+                      width={40} 
+                      height={40} 
+                      className="object-cover"
+                      unoptimized 
+                    />
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 font-mono text-sm font-semibold text-white rounded-full"
+                    style={{
+                      background: "#252535",
+                      border: "1px solid rgba(255,255,255,0.15)",
+                    }}
+                  >
+                    {experience.initials}
+                  </div>
+                )}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-base font-medium text-white break-words sm:text-xl">
+                  <h3 className="text-base font-medium text-white break-words sm:text-lg">
                     {experience.role}
                   </h3>
                   <p className="text-xs break-words sm:text-sm text-white/60">
@@ -43,17 +60,17 @@ export default function ExperienceModal({
             </div>
             <button
               onClick={onClose}
-              className="flex-shrink-0 ml-2 text-xl transition-colors text-white/60 hover:text-white"
+              className="flex-shrink-0 transition-colors text-white/60 hover:text-white"
             >
-               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-    <path d="M18 6L6 18M6 6l12 12" />
-  </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
             </button>
           </div>
         </div>
 
-        {/* Body - Scrollable */}
-        <div className="flex-1 p-4 overflow-y-auto custom-scroll sm:p-6">
+        {/* Body - Scrollable - Fixed for desktop */}
+        <div className="flex-1 p-4 overflow-y-auto sm:p-5">
           <h4 className="mb-3 font-mono text-xs tracking-widest text-white/40">
             KEY ACHIEVEMENTS
           </h4>
