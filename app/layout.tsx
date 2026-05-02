@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageLoader from "@/components/PageLoader";
 import { DM_Serif_Display, DM_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dmSerif.variable} ${dmMono.variable} font-sans antialiased bg-bg text-[#f0ede8] pb-20`}
       >
+           <PageLoader />
         {children}
       </body>
     </html>
