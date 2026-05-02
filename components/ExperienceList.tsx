@@ -38,7 +38,7 @@ export default function ExperienceList({ experiences }: { experiences: Experienc
   )}
 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium break-words text-white/90">
+                  <p className="font-medium break-words text-md text-white/90">
                     {job.role}
                   </p>
                   <p className="text-xs mt-0.5 text-white/40 break-words">

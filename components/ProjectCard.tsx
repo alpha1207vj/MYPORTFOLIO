@@ -121,7 +121,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <h3 className="text-sm font-medium mb-1.5" style={{ color: "rgba(240,237,232,0.92)" }}>
             {project.title}
           </h3>
-          <p className="flex-1 mb-3 text-xs leading-relaxed text-muted">{project.desc}</p>
+          <p className="flex-1 mb-3 text-sm leading-relaxed text-muted">{project.desc}</p>
           
           <div className="flex flex-wrap gap-1.5 mb-3">
             {project.tags.slice(0, 3).map((t) => (

@@ -42,7 +42,7 @@ export default function Home() {
                 </h1>
               </div>
               <p 
-                className="max-w-md mb-5 text-sm leading-relaxed text-white/50"
+                className="max-w-100 mb-5 leading-relaxed text-[20px] text-white/50"
                 dangerouslySetInnerHTML={{ __html: PERSONAL.tagline }}
               />
               <div className="flex flex-col items-center gap-3 sm:flex-row">
@@ -72,10 +72,10 @@ export default function Home() {
         <section id="about" className="pt-8 pb-6 reveal">
           <h2 className="mb-4 font-serif text-3xl text-white">About Me</h2>
           <p
-            className="max-w-xl mb-4 text-sm leading-loose text-white/50"
+            className="max-w-xl mb-4 text-[20px] leading-loose text-white/50"
             dangerouslySetInnerHTML={{ __html: PERSONAL.bio }}
           />
-          <h3 className="mb-2 font-mono text-xs tracking-widest text-white/40">Tech Stack</h3>
+          <h3 className="mb-2 font-mono text-sm tracking-widest text-white/70">Tech Stack</h3>
           <div className="flex flex-wrap gap-2">
             {SKILLS.map((s) => (
               <TechPill key={s.name} tag={s} />
@@ -88,12 +88,12 @@ export default function Home() {
           <h2 className="mb-5 font-serif text-3xl text-white">Event Experience</h2>
           <ExperienceList experiences={EXPERIENCE} />
 
-          <h2 className="mt-8 mb-4 font-serif text-2xl text-white">Education</h2>
+          <h2 className="mt-8 mb-4 font-serif text-3xl text-white">Education</h2>
          {EDUCATION.map((edu) => (
   <div key={edu.institution} className="py-2">
     <div className="flex items-start gap-3">
       <div
-  className="flex items-center justify-center flex-shrink-0 w-8 h-8 overflow-hidden font-mono text-xs font-semibold text-white rounded-full"
+  className="flex items-center justify-center flex-shrink-0 w-8 h-8 overflow-hidden font-mono font-semibold text-white rounded-full text-md"
   style={{
     background: "#1a1a1a",
     border: "1px solid rgba(255,255,255,0.15)",
@@ -107,7 +107,7 @@ export default function Home() {
 </div>
       <div className="flex-1 min-w-0">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5">
-          <p className="text-sm font-medium text-white/90">{edu.degree}</p>
+          <p className="font-medium text-md text-white/90">{edu.degree}</p>
           <span className="font-mono text-xs whitespace-nowrap text-white/40">
             {edu.period}
           </span>
